@@ -1,0 +1,33 @@
+plugins
+{
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group 'eleeter.warden'
+version '1.0'
+
+mainClassName = 'eleeter.warden.Main'
+
+repositories
+{
+    mavenCentral()
+}
+
+dependencies
+{
+    implementation 'net.dv8tion:JDA:5.2.0'
+    implementation 'org.slf4j:slf4j-simple:2.0.9'
+    implementation 'org.xerial:sqlite-jdbc:3.45.1.0'
+    implementation 'org.mockito:mockito-core:3.5.13'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'io.github.cdimascio:dotenv-java:3.0.0'
+    implementation 'com.microsoft.playwright:playwright:1.40.0'
+
+}
+
+tasks.withType(JavaCompile)
+{
+    options.encoding = 'UTF-8'
+}
